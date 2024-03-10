@@ -86,6 +86,13 @@ class WebInterfaceTests {
 
 		webDriver.get("http://localhost:" + port + "/student/id?id=1");
 
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			throw new RuntimeException(e);
+		}
+
+
 		WebElement table = webDriver.findElement(By.tagName("table"));
 		List<WebElement> cells = webDriver.findElements(By.tagName("td"));
 
