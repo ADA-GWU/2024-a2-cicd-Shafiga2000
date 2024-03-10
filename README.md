@@ -19,7 +19,7 @@ mvn clean package or mvn test ( Tests results will be visible and BUILD SUCCESS 
 
 2.Open the project via tool as Visual Studio Code or  IntelliJ IDEA . You can run tests from files in the test/config folder.
 
-<h3>Functionality Tests<h3>
+<h3>Functionality Tests</h3>
 <p>To run functionality tests, navigate to the FunctionalityTests class. You can run all tests by selecting the sign which is located on left side from class , click and choose appropriate option or using the shortcut Ctrl + Shift + F10.</p>
 Tests included:<br>
 •	Test finding a student by ID<br>
@@ -33,9 +33,12 @@ Tests included:<br>
 
 <h3>Web Interface Tests</h3>
 In case , you want to see visually , you need to navigate to the file called SeleniumConfig in the folder test/config , and change last part to this:<br>
+
+
 WebDriverManager.firefoxdriver().setup();<br>
  //return new FirefoxDriver(options);<br>
 return new FirefoxDriver();<br>
+
 
 To run web interface tests, navigate to the WebInterfaceTests class. You can run all tests by selecting the appropriate option or using the shortcut Ctrl + Shift + F10.<br>
 Tests included:<br>
