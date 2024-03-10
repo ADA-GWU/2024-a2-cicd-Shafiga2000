@@ -62,6 +62,26 @@ public class FunctionalityTests {
         assertEquals(2, students.size() );
     }
 
+    @Test
+    @DisplayName("Test save a student")
+    public void testStudentSave(){
+
+
+        Student studentToSave = new Student(1,"Shafa" ,"Hasanova", "shafa@.com" , new Date(), null , null);
+
+
+        when(studentRepository.save(studentToSave)).thenReturn(studentToSave);
+
+        Student savedStudent = studentService.saveStudent(studentToSave);
+
+        assertNotNull(savedStudent);
+
+        assertEquals(studentToSave.getStudentId(),savedStudent.getStudentId());
+        assertEquals(studentToSave.getFirstName(),savedStudent.getFirstName());
+        assertEquals(studentToSave.getLastName(),savedStudent.getLastName());
+        assertEquals(studentToSave.getEmail(),savedStudent.getEmail());
+
+    }
 
 
 
