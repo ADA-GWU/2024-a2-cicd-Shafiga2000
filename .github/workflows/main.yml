@@ -23,7 +23,9 @@ jobs:
           distribution: 'adopt'
 
       - name: Build with Maven
+        working-directory: webtest-master
         run: mvn clean package -DskipTests
 
       - name: Run tests
+        working-directory: webtest-master
         run: mvn test
