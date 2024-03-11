@@ -13,19 +13,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Set up JDK 15
+      - name: Set up 
         uses: actions/setup-java@v2
         with:
           java-version: '15'
           distribution: 'adopt'
 
-      - name: Build with Maven
+      - name: Build mvn
         working-directory: webtest-master
         run: mvn clean package -DskipTests
 
-      - name: Run tests
+      - name: Run all 8 tests
         working-directory: webtest-master
         run: mvn test
